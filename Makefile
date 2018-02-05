@@ -1,4 +1,4 @@
 LIBDIR=/usr/lib
 
 install:
-	gcc -Wall -I/usr/include/mysql -I. -shared lib_mysqludf_sys.c -o $(LIBDIR)/lib_mysqludf_sys.so
+	gcc -Wall -fPIC -I/usr/include/mysql -I/usr/include/mariadb -I. -shared lib_mysqludf_sys.c -o $(LIBDIR)/mysql/plugin/lib_mysqludf_sys.so
